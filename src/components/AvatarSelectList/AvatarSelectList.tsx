@@ -21,7 +21,7 @@ const AvatarSelectList = ({ avatars, selectingId, selectedId, onAvatarSelected }
             src={avatar.src}
             label={avatar.label}
             onClick={() => {
-              if (selectingId === undefined) onAvatarSelected(avatar)
+              if (selectingId === undefined && selectedId !== avatar.id) onAvatarSelected(avatar)
             }}
             selecting={avatar.id === selectingId}
             selected={avatar.id === selectedId}

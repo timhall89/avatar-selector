@@ -12,21 +12,53 @@
   height: 60px;
   border-style: solid;
   border-color: transparent;
-  margin: 0px;
-  padding: 0px;
   border-width: 3px;
   color: rgb(249, 249, 249);
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.avatar-selector-avatar-select-image.selected:not(.selecting) {
+  cursor: not-allowed;
+}
+
 .avatar-selector-avatar-select-image.selected:not(.selecting) > img,
-.avatar-selector-avatar-select-image:not(.selecting) > img:hover {
+.avatar-selector-avatar-select-image:not(.selecting):hover > img {
   border-color: rgb(155, 160, 163);
 }
 
 @keyframes rotation {
   from {transform: rotate(0deg);}
   to {transform: rotate(359deg);}
+}
+
+.avatar-selector-avatar-select-image > .overlay{
+  border: solid 3px transparent;
+  border-radius: 50%;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  visibility: hidden;
+  background-color: rgb(122, 161, 178);
+  opacity: 20%;
+}
+
+.avatar-selector-avatar-select-image:hover > .overlay{
+  visibility: visible;
+}
+
+.avatar-selector-avatar-select-image > .spin{
+  border: solid 3px rgb(122, 161, 178);
+  border-right-color: transparent;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.avatar-selector-avatar-select-image.selecting > .spin{
+  animation: 1s linear infinite rotation;
+  visibility: initial;
 }
 
 @-webkit-keyframes rotation {
@@ -47,21 +79,4 @@
 @-ms-keyframes rotation {
   from {-ms-transform: rotate(0deg);}
   to {-ms-transform: rotate(359deg);}
-}
-
-.avatar-selector-avatar-select-image > .spin{
-  border: solid 3px rgb(122, 161, 178);
-  border-right-color: transparent;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  margin: 0px;
-  padding: 0px;
-  visibility: hidden;
-}
-
-.avatar-selector-avatar-select-image.selecting > .spin{
-  animation: 1s linear infinite rotation;
-  visibility: initial;
 }
