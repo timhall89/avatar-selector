@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from '../../Avatar';
+import Avatar from '../../types/Avatar';
 import AvatarSelectImage from '../AvatarSelectImage'
 import images from '../../assets/images'
 import './AvatarSelectList.css';
