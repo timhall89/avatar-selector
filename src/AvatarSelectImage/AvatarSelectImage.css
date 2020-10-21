@@ -27,6 +27,21 @@
   to {transform: rotate(359deg);}
 }
 
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(359deg);}
+}
+
 .avatar-selector-avatar-select-image > .spin{
   border: solid 3px rgb(122, 161, 178);
   border-right-color: transparent;
