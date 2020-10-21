@@ -1,0 +1,13 @@
+.avatar-selector-avatar-select-list {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
+  gap: 5px;
+}
+
+.avatar-selector-avatar-select-list > li {
+  list-style-type: none;
+}
