@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import './App.css';
-import AvatarSelector from './components/AvatarSelector';
-import images from './assets/images';
-import Avatar from './types/Avatar';
+import AvatarSelector from '../components/AvatarSelector';
+import images from '../assets/images';
+import Avatar from '../types/Avatar';
 
 const avatarsRaw: Avatar[] = [
   { "src": "avatar1.png", "label": "Avatar 1", "id": 1 },
