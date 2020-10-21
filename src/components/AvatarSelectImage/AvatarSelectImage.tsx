@@ -11,9 +11,13 @@ interface AvatarImageProps {
 }
 
 const AvatarImage = ({ src, label, onClick, selecting, selected }: AvatarImageProps) => (
-  <div className={`avatar-selector-avatar-select-image ${selecting ? 'selecting' : ''} ${selected ? 'selected' : ''}`} onClick={onClick}>
+  <div
+    className={`avatar-selector-avatar-select-image ${selecting ? 'selecting' : ''} ${selected ? 'selected' : ''}`}
+    onClick={onClick}
+    title={label}
+  >
     <div className="spin"></div>
-    <img src={src} alt={label} title={label} />
+    <img src={src} alt={label} />
     <div className="overlay"></div>
   </div>
 )
