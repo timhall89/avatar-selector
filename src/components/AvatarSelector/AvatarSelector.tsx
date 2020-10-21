@@ -9,7 +9,7 @@ import Avatar from '../../types/Avatar';
 interface AvatarSelectorProps {
   avatars: Avatar[];
   selected: Avatar;
-  onAvatarSelected: (avatar: Avatar) => Promise<void>
+  onAvatarSelected: (avatar: Avatar) => Promise<boolean>
 };
 
 const AvatarSelector = ({ avatars, selected, onAvatarSelected }: AvatarSelectorProps) => {
@@ -17,9 +17,10 @@ const AvatarSelector = ({ avatars, selected, onAvatarSelected }: AvatarSelectorP
   const [selecting, setSelecting] = useState<Avatar | null>(null);
   const handleAvatarSelected = async (avatar: Avatar) => {
     setSelecting(avatar);
-    await onAvatarSelected(avatar);
-    setSelecting(null);
-    setShowPopover(false);
+    if (await onAvatarSelected(avatar)) {
+      setSelecting(null);
+      setShowPopover(false);
+    };
   }
   return (
     <div className="avatar-selector">
