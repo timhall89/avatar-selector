@@ -5,7 +5,7 @@
 
 .avatar-selector-avatar-select-list.selecting,
 .avatar-selector-avatar-select-list.selecting * {
-  cursor: wait;
+  cursor: not-allowed;
 }
 
 .avatar-selector-avatar-select-list > ul {
