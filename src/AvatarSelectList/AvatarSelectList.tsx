@@ -5,7 +5,6 @@ import AvatarSelectImage from '../AvatarSelectImage'
 import images from '../assets/images'
 import './AvatarSelectList.css';
 
-
 interface AvatarSelectListProps {
   avatars: Avatar[];
   selectingId?: number;
@@ -30,7 +29,6 @@ const AvatarSelectList = ({ avatars, selectingId, selectedId, onAvatarSelected }
         </li>))}
     </ul>
   </div>
-
 )
 
 AvatarSelectList.propTypes = {
