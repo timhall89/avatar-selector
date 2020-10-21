@@ -42,6 +42,11 @@
   to {-o-transform: rotate(359deg);}
 }
 
+@-ms-keyframes rotation {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(359deg);}
+}
+
 .avatar-selector-avatar-select-image > .spin{
   border: solid 3px rgb(122, 161, 178);
   border-right-color: transparent;
