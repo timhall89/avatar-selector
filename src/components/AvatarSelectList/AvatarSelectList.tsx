@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Avatar from '../../types/Avatar';
 import AvatarSelectImage from '../AvatarSelectImage'
-import images from '../../assets/images'
 import './AvatarSelectList.css';
 
 interface AvatarSelectListProps {
@@ -19,7 +18,8 @@ const AvatarSelectList = ({ avatars, selectingId, selectedId, onAvatarSelected }
       {avatars.map(avatar => (
         <li key={avatar.id}>
           <AvatarSelectImage
-            src={images[avatar.src]}
+            src={avatar.src}
+            label={avatar.label}
             onClick={() => {
               if (selectingId === undefined) onAvatarSelected(avatar)
             }}
