@@ -14,14 +14,16 @@ interface AvatarSelectListProps {
 }
 
 const AvatarSelectList = ({ avatars, selectingId, selectedId, onAvatarSelected }: AvatarSelectListProps) => (
-  <div className="avatar-selector-avatar-select-list">
+  <div className={`avatar-selector-avatar-select-list ${selectingId !== undefined ? 'selecting' : ''}`}>
     <h4>Choose your avatar</h4>
     <ul>
       {avatars.map(avatar => (
         <li key={avatar.id}>
           <AvatarSelectImage
             src={images[avatar.src]}
-            onClick={() => onAvatarSelected(avatar)}
+            onClick={() => {
+              if (selectingId === undefined) onAvatarSelected(avatar)
+            }}
             selecting={avatar.id === selectingId}
             selected={avatar.id === selectedId}
           />

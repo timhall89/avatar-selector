@@ -3,6 +3,11 @@
   justify-items: center;
 }
 
+.avatar-selector-avatar-select-list.selecting,
+.avatar-selector-avatar-select-list.selecting * {
+  cursor: wait;
+}
+
 .avatar-selector-avatar-select-list > ul {
   margin: 0px;
   padding: 0px;
