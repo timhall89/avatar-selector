@@ -3,21 +3,25 @@
   display: grid;
   justify-items: center;
   width: fit-content;
+  transform: scale(0);
   transform-origin: 50% 20px;
   animation-fill-mode: forwards;
-  animation-name: hide;
-  animation-duration: 0.35s;
   left: calc(50% - 154px);
   width: 308px;
+}
+
+.avatar-selector-popover.hide {
+  animation-name: hide;
+  animation-duration: 0.35s;
 }
 
 .avatar-selector-popover.show {
   animation-name: show;
   animation-duration: 0.5s;
+
 }
 
 .avatar-selector-popover > .popover-inner {
-  /* width: 280px; */
   background-color: rgb(44, 48, 51);
   padding: 14px;
   border-radius: 2px;
