@@ -1,0 +1,45 @@
+.avatar-selector-avatar-select-image {
+  position: relative;
+  width: fit-content;
+  border-radius: 50%;
+  display: flex; 
+  cursor: pointer;
+}
+
+.avatar-selector-avatar-select-image > .image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  border-width: 3px;
+}
+
+.avatar-selector-avatar-select-image.selected:not(.selecting) > .image,
+.avatar-selector-avatar-select-image:not(.selecting) > .image:hover {
+  border-color: rgb(155, 160, 163);
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(359deg);}
+}
+
+.avatar-selector-avatar-select-image > .spin{
+  border: solid 3px rgb(122, 161, 178);
+  border-right-color: transparent;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+}
+
+.avatar-selector-avatar-select-image.selecting > .spin{
+  animation: 1s linear infinite rotation;
+  visibility: initial;
+}

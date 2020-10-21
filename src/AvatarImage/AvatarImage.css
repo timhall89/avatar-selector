@@ -1,0 +1,15 @@
+.avatar-selector-avatar-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.avatar-selector-avatar-image:hover {
+  border-color: rgb(155, 160, 163);
+}
