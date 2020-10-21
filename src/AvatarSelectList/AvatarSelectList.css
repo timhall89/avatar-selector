@@ -1,4 +1,9 @@
 .avatar-selector-avatar-select-list {
+  display: grid;
+  justify-items: center;
+}
+
+.avatar-selector-avatar-select-list > ul {
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -8,6 +13,15 @@
   gap: 5px;
 }
 
-.avatar-selector-avatar-select-list > li {
+.avatar-selector-avatar-select-list > h4 {
+  color: rgb(249, 249, 249);
+  font-size: 16px;
+  margin-bottom: 14px;
+  margin-top: 3px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: initial;
+}
+
+.avatar-selector-avatar-select-list > ul > li {
   list-style-type: none;
 }

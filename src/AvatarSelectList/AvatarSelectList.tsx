@@ -14,17 +14,21 @@ interface AvatarSelectListProps {
 }
 
 const AvatarSelectList = ({ avatars, selectingId, selectedId, onAvatarSelected }: AvatarSelectListProps) => (
-  <ul className="avatar-selector-avatar-select-list">
-    {avatars.map(avatar => (
-      <li key={avatar.id}>
-        <AvatarSelectImage
-          src={images[avatar.src]}
-          onClick={() => onAvatarSelected(avatar)}
-          selecting={avatar.id === selectingId}
-          selected={avatar.id === selectedId}
-        />
-      </li>))}
-  </ul>
+  <div className="avatar-selector-avatar-select-list">
+    <h4>Choose your avatar</h4>
+    <ul>
+      {avatars.map(avatar => (
+        <li key={avatar.id}>
+          <AvatarSelectImage
+            src={images[avatar.src]}
+            onClick={() => onAvatarSelected(avatar)}
+            selecting={avatar.id === selectingId}
+            selected={avatar.id === selectedId}
+          />
+        </li>))}
+    </ul>
+  </div>
+
 )
 
 AvatarSelectList.propTypes = {
