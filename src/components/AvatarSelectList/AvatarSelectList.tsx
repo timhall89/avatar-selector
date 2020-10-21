@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from '../Avatar';
+import Avatar from '../../Avatar';
 import AvatarSelectImage from '../AvatarSelectImage'
-import images from '../assets/images'
+import images from '../../assets/images'
 import './AvatarSelectList.css';
 
 interface AvatarSelectListProps {
